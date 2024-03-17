@@ -33,16 +33,16 @@ def base_activity(started = False):
             'small_image': 'afk',
             'small_text': 'Idle',
             'large_image': 'https://raw.githubusercontent.com/zikaura/SublimeDiscordRP/master/icons/sekai-ide.png',
-            'large_text': 'Sublime Text v%s' % (sublime.version())
+            'large_text': 'Sekai Editor v%s' % (sublime.version())
         },
         'state': settings.get('start_state') if started else 'Idle'
     }
     if settings.get('big_icon'):
         activity['assets'] = {
-            'large_image': 'afk',
+            'large_image': 'https://raw.githubusercontent.com/zikaura/SublimeDiscordRP/master/icons/sekai-ide.png',
             'large_text': 'Idle',
             'small_image': 'sublime3',
-            'small_text': 'Sublime Text v%s' % (sublime.version())
+            'small_text': 'Sekai Editor v%s' % (sublime.version())
         }
     return activity
 
