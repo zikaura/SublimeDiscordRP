@@ -16,6 +16,8 @@ settings = {}
 DISCORD_CLIENT_ID = '389368374645227520'
 RECONNECT_DELAY = 15000
 
+sekai_icon_url = 'https://raw.githubusercontent.com/zikaura/SublimeDiscordRP/master/icons/sekai-ide.png'
+idle_icon_url = 'https://raw.githubusercontent.com/zikaura/SublimeDiscordRP/master/icons/sekai-idle.png'
 logger = logging.getLogger(__name__)
 
 last_file = ''
@@ -32,17 +34,17 @@ def base_activity(started = False):
         'assets': {
             'small_image': 'afk',
             'small_text': 'Idle',
-            'large_image': 'https://raw.githubusercontent.com/zikaura/SublimeDiscordRP/master/icons/sekai-ide.png',
+            'large_image': sekai_icon_url,
             'large_text': 'Sekai Editor v%s' % (sublime.version())
         },
         'state': settings.get('start_state') if started else 'Idle'
     }
     if settings.get('big_icon'):
         activity['assets'] = {
-            'large_image': 'https://raw.githubusercontent.com/zikaura/SublimeDiscordRP/master/icons/sekai-ide.png',
+            'large_image': sekai_icon_url,
             'large_text': 'Idle',
-            'small_image': 'sublime3',
-            'small_text': 'Sekai Editor v%s' % (sublime.version())
+            'small_image': idle_icon_url,
+            'small_text': 'Sekai Editor vs%s' % (sublime.version())
         }
     return activity
 
