@@ -32,7 +32,7 @@ def base_activity(started = False):
         'assets': {
             'small_image': 'afk',
             'small_text': 'Idle',
-            'large_image': 'sublime3',
+            'large_image': 'https://raw.githubusercontent.com/zikaura/SublimeDiscordRP/master/icons/sekai-ide.png',
             'large_text': 'Sublime Text v%s' % (sublime.version())
         },
         'state': settings.get('start_state') if started else 'Idle'
