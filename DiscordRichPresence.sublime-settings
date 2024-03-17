@@ -18,10 +18,10 @@
     //   {folders} - The number of folders open
 
     // The format the presence details (top line) will be in.
-    "details": "Editing {file} for Project {project}",
+    "details": "Editing {file}",
 
     // The format the presence state (bottom line) will be in.
-    "state": "Size: {sizehf}",
+    "state": "{project}",
 
     // The state message when Sublime Text (or the plugin) starts. (NOT FORMATTED)
     "start_state": "Just launched",

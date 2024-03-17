@@ -13,7 +13,7 @@ from . import discord_ipc
 
 SETTINGS_FILE = 'DiscordRichPresence.sublime-settings'
 settings = {}
-DISCORD_CLIENT_ID = '389368374645227520'
+DISCORD_CLIENT_ID = '1218918945453772893'
 RECONNECT_DELAY = 15000
 
 sekai_icon_url = 'https://raw.githubusercontent.com/zikaura/SublimeDiscordRP/master/icons/sekai-ide.png'
@@ -32,10 +32,10 @@ stamp = start_time
 def base_activity(started = False):
     activity = {
         'assets': {
-            'small_image': 'afk',
+            'small_image': idle_icon_url,
             'small_text': 'Idle',
             'large_image': sekai_icon_url,
-            'large_text': 'Sekai Editor v%s' % (sublime.version())
+            'large_text': 'Sekai IDE v%s' % (sublime.version())
         },
         'state': settings.get('start_state') if started else 'Idle'
     }
@@ -44,7 +44,7 @@ def base_activity(started = False):
             'large_image': sekai_icon_url,
             'large_text': 'Idle',
             'small_image': idle_icon_url,
-            'small_text': 'Sekai Editor vs%s' % (sublime.version())
+            'small_text': 'Sekai IDE v%s' % (sublime.version())
         }
     return activity
 
